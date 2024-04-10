@@ -24,7 +24,7 @@ pipeline {
        stage ("Test"){
            steps {
                //Package.json - have SCRIPTS - which runs test for react application - it will run at this stage
-               sh 'npm test'
+               //sh 'npm test'
                sh './jenkins/scripts/test.sh'
            }
        }
