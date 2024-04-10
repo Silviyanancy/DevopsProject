@@ -25,7 +25,7 @@ pipeline {
            steps {
                //Package.json - have SCRIPTS - which runs test for react application - it will run at this stage
                sh 'npm test'
-               sh './src/scripts/test.sh'
+               sh './jenkins/scripts/test.sh'
            }
        }
        //It is built on docker whch is already in jenkins container
