@@ -49,13 +49,13 @@ pipeline {
             }
         }
        }
-      stage ("Deploying React Story App container to Kubernetes"){
+      /*stage ("Deploying React Story App container to Kubernetes"){
         steps{
             script{
                 kubernetesDeploy (configs: {'deployment.yaml', 'service.yaml'}, kubeconfigId: 'kubernetes')                               
                 }
             }
-        }
+        }*/
        
    }
 }
