@@ -1,4 +1,3 @@
-
 #base image
 FROM node:18-alpine
 
@@ -6,10 +5,10 @@ FROM node:18-alpine
 #ENV NODE_ENV development
 
 #working directory - whatever command we run it will be for the react application
-WORKDIR /blogreactapp
+WORKDIR /app
 
 #cache and install dependencies
-COPY package.json .
+COPY package.json /app
 
 #While NPM fetches packages from the online npm registry for every 'install' command, YARN stores dependencies locally in most cases and fetches 
 #packages from a local disk, given that dependency has been installed earlier. This makes YARN considerably faster than NPM when it comes to fetching packages.
@@ -30,6 +29,3 @@ EXPOSE 3000
 
 #To start the application inside the container and ensure it runs, 
 CMD ["npm", "run", "start"]
-
-
-

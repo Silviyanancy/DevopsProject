@@ -21,12 +21,10 @@ pipeline {
            }
        }
        //stage to check whether we have all the dependencies installed
-      /* stage ("Test"){
+     /*  stage ("Test"){
            steps {
                //Package.json - have SCRIPTS - which runs test for react application - it will run at this stage
-               //sh 'npm test'
-               sh "chmod +x -R ${env.WORKSPACE}"
-               sh './jenkins/scripts/test.sh'
+               sh 'npm test'
            }
        }*/
        //It is built on docker whch is already in jenkins container
@@ -49,10 +47,10 @@ pipeline {
             }
         }
        }
-      /*stage ("Deploying React Story App container to Kubernetes"){
+      /* stage ("Deploying React Story App container to Kubernetes"){
         steps{
             script{
-                kubernetesDeploy (configs: {'deployment.yaml', 'service.yaml'}, kubeconfigId: 'kubernetes')                               
+                kubernetesDeploy (configs: 'deploymentservice.yaml', kubeconfigId: 'kubernetes')                               
                 }
             }
         }*/
