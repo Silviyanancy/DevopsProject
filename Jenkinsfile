@@ -21,12 +21,13 @@ pipeline {
            }
        }
        //stage to check whether we have all the dependencies installed
-     /*  stage ("Test"){
+      stage ("Test"){
            steps {
                //Package.json - have SCRIPTS - which runs test for react application - it will run at this stage
-               sh 'npm test'
+               //sh 'npm test'
+               sh './jenkins/scripts/test.sh'
            }
-       }*/
+       }
        //It is built on docker whch is already in jenkins container
        stage ("Building Image"){
         steps{
