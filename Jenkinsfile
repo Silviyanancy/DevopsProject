@@ -25,6 +25,7 @@ pipeline {
            steps {
                //Package.json - have SCRIPTS - which runs test for react application - it will run at this stage
                //sh 'npm test'
+               sh "chmod +x -R ${env.WORKSPACE}"
                sh './jenkins/scripts/test.sh'
            }
        }
