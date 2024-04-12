@@ -7,7 +7,7 @@ pipeline {
    //environment setup for the image
    environment{
     //imageName = "nancysilviya/storyreactapp" //docker_usrname/any_name
-    imageName = "nancysilviya/blogreactapp"
+    imageName = "nancysilviya/storyreactapp-version1"
     registryCredential = 'nancysilviya' //for credential
     dockerImage = '' //palceholder_hold the instance of the docker image
    }
