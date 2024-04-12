@@ -6,10 +6,10 @@ FROM node:18-alpine
 #ENV NODE_ENV development
 
 #working directory - whatever command we run it will be for the react application
-WORKDIR /app
+WORKDIR /blogreactapp
 
 #cache and install dependencies
-COPY package.json /app
+COPY package.json .
 
 #While NPM fetches packages from the online npm registry for every 'install' command, YARN stores dependencies locally in most cases and fetches 
 #packages from a local disk, given that dependency has been installed earlier. This makes YARN considerably faster than NPM when it comes to fetching packages.

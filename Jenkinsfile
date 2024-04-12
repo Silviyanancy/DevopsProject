@@ -7,7 +7,7 @@ pipeline {
    //environment setup for the image
    environment{
     //imageName = "nancysilviya/storyreactapp" //docker_usrname/any_name
-    imageName = "nancysilviya/storyreactapp-version1"
+    imageName = "nancysilviya/blogreactapp"
     registryCredential = 'nancysilviya' //for credential
     dockerImage = '' //palceholder_hold the instance of the docker image
    }
@@ -49,13 +49,13 @@ pipeline {
             }
         }
        }
-      /* stage ("Deploying React Story App container to Kubernetes"){
+      stage ("Deploying React Story App container to Kubernetes"){
         steps{
             script{
-                kubernetesDeploy (configs: 'deploymentservice.yaml', kubeconfigId: 'kubernetes')                               
+                kubernetesDeploy (configs: {'deployment.yaml', 'service.yaml'}, kubeconfigId: 'kubernetes')                               
                 }
             }
-        }*/
+        }
        
    }
 }
