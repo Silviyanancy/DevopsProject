@@ -52,7 +52,7 @@ pipeline {
      stage ("Deploying React Story App container to Kubernetes"){
         steps{
             script{
-                kubernetesDeploy (configs: 'deployment.yaml', 'service.yaml')                               
+                kubernetesDeploy (configs: "deployment.yaml", "service.yaml", )                               
                 }
             }
         }

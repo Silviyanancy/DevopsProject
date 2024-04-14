@@ -13,10 +13,12 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nancysilviya/storyreactapp-version1
+        image: nancysilviya/storyreactapp-version1:latest
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
         - containerPort: 3000
+
+
